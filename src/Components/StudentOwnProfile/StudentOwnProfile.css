@@ -1,0 +1,158 @@
+
+#student_own_profile_upper_part{
+    background-color: #111111;
+    height: 100px;
+}
+#student_own_profile_root{
+    width: 100%;
+    min-height: 800px;
+    height: fit-content;
+    background-color: #111111;
+    direction: rtl;
+    color:white;
+}
+
+#student_own_profile_student_name , 
+#student_own_profile_class{
+ 
+    margin-top: 30px;
+    text-indent: 15px;
+    font-weight: normal;
+    background-image: linear-gradient(50deg, #00d5ff ,#00ff80, #00d5ff ,#00ff80 );
+    font-size: 60px;
+    color:transparent;
+    background-clip: text;
+    margin-right: 15px;
+    width: fit-content;
+    font-variant: all-petite-caps;
+}
+
+@keyframes show_student_name{
+    from{
+        opacity:0;
+    }
+}
+#student_own_profile_class{
+    margin-top: 0px;
+    text-indent: 30px;
+    font-size: 40px;
+}
+
+#student_own_profile_middle_part{
+    width: 50%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#student_own_profile_city_school_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;   
+    padding: 50px 0px ; 
+}
+
+#student_own_profile_balance{
+    
+    margin: auto;
+    margin-top: 25px;
+    background-image: linear-gradient(50deg, #00d5ff ,#00ff80, #00d5ff ,#00ff80 );
+    background-clip: text;
+    color:transparent;
+    border: 2px solid rgb(0, 255, 140);
+    box-shadow: 0px 0px 5px rgb(0, 255, 140);
+    font-size: 25px;
+    width: fit-content;
+    padding: 15px 30px;
+    border-radius:5px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+}
+
+
+#student_own_profile_exams_title,
+#student_own_profile_premium_content_title{
+    margin-top: 15px;
+    text-indent: 15px;
+}
+
+#student_own_profile_exams_table_container ,
+#student_own_profile_premium_content_table_container{
+   min-height: fit-content;
+   overflow: auto;
+   width: 90%;
+   margin:20px auto;
+   border: 1px solid gray;
+   border-collapse: collapse;
+
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+
+} 
+#student_own_profile_exam_table,
+#student_own_profile_premium_content_table{
+    width: 100%;
+   border-collapse: collapse;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+ 
+
+#student_own_profile_exam_table td,
+#student_own_profile_exam_table th,
+
+#student_own_profile_premium_content_table td ,
+#student_own_profile_premium_content_table th{
+    padding:15px 10px;
+    text-align: center;
+    user-select: none;  
+}
+
+
+#student_own_profile_exam_table th,
+#student_own_profile_premium_content_table th{
+    font-weight: normal;
+    color:#00ff80;
+    font-size: 18px;
+}
+#student_own_profile_exam_table td,
+#student_own_profile_premium_content_table td
+{
+    font-size: 15px;
+}
+
+
+#student_own_profile_premium_content_table tbody tr{
+    cursor: pointer;
+}
+
+#student_own_profile_exam_table tbody tr,
+#student_own_profile_premium_content_table tbody tr{
+    border: 1px solid gray;
+    background-color:rgb(19, 19, 19);
+    border-collapse: collapse;
+}
+
+#student_own_profile_exam_table tbody tr:hover,
+#student_own_profile_premium_content_table tbody tr:hover{
+    background-color:  rgb(0, 70, 50)   !important;
+}
+
+#student_own_profile_exam_table th ,
+#student_own_profile_premium_content_table th{
+    border: 1px solid gray;
+}
+.student-own-profile-paginate-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style-type: none;
+    border:1px solid #00ff80;
+   border-bottom-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+    padding: 10px 0px;
+  direction: ltr;
+}

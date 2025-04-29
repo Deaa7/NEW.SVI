@@ -1,0 +1,138 @@
+
+#teacher_list_root{
+    width: 100%;
+    height: fit-content;
+    min-height: 150px;
+    margin: auto;
+    margin-top: 40px;
+   border-radius: 10px;
+    background-color: rgb(30, 30, 30);
+    padding:10px;
+    position: relative;
+}
+.filter_subject_name{
+    margin: 1px 0px;
+}
+#teacher_list_items{
+    max-height: 300px;
+    overflow-y: auto;
+}
+.teacher_list_row{
+background-color: rgba(15, 15, 15, 0.597);
+display: flex;
+justify-content: space-between;
+padding:5px;
+border-radius: 5px;
+margin-bottom:15px;
+cursor: pointer;
+}
+.teacher_list_row:hover{
+    background-color: rgb(49, 49, 49);
+}
+.teacher_list_row .number{
+    font-size: 20px;
+    text-shadow: 0px 0px 5px white;
+    margin : auto;
+}
+.teacher_list_row .teacher_image{
+ width: 60px;
+ height: 60px;
+ border-radius: 30px;
+ margin-right: 5px;
+}
+
+.teacher_info_section{
+  display: flex;
+ justify-content: start;
+ font-size: 12px;
+ width: 200px;
+}
+.teacher_full_name{
+    margin-top: 5px;
+}
+
+.teacher_info_section .teacher_subjects_name,
+.teacher_info_section .teacher_class{
+    margin-top: 3px;
+}
+.for_flex{
+ margin-right: 10px;
+}
+
+.rest_info{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* background-color: blue; */
+    width: 85%;
+    /* margin-right: 5%; */
+}
+
+.rest_info > div{
+  
+    text-align: center  ;
+    padding-top: 1%;
+    width: fit-content;
+}
+ 
+.teacher_list_row .teacher_list_row_info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.physics_subject ,
+.chemistry_subject,
+.math_subject,
+.science_subject,
+.english_subject,
+.france_subject,    
+.islam_subject,
+.arabic_subject,
+.national_subject,
+.physics_chemistry_subject,
+.geography_subject{
+width: fit-content;
+display: inline-block;
+
+}
+ 
+#teacher_list_background{
+    background-color: rgba(0, 0, 0, 0.855);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0px;
+    top:0px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+    border-radius: 10px;
+}
+
+#teacher_list_background #teacher_list_background_content{
+    margin: auto;
+    font-size: 30px;
+}
+.no-result-case{
+    background-color: rgb(17, 17, 17);
+    width: fit-content;
+    padding:20px;
+    margin: 50px auto;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.teacher-preview-home-paginate{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap ;
+    list-style-type: none;
+    margin-top: 15px;
+    direction: ltr;
+}
+#teacher_list_root .single-page-element{
+    font-size: 20px;
+}

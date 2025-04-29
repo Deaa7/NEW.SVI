@@ -1,0 +1,1029 @@
+
+#text_editor_upper_part{
+width: 100%;
+height:100px;
+}
+
+#text_editor_title{
+ color:white;
+ font-size:38px;
+ padding:10px;
+ margin-bottom: 1%;
+ direction : rtl;
+ text-shadow : 0px 0px 5px white;
+}
+
+
+
+#text_editor_title_hint{
+ padding:10px;
+ direction : rtl;
+ color:#b6b6b6;
+ line-height:120%;
+ margin-bottom:5%;
+	
+}
+
+#text_editor_middle_part{
+ 
+    direction:rtl;
+    width: 97%;
+    margin: auto;
+    /* background-color: red; */
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+#text_editor_subject_name_class_note_name_container{
+    /* background-color: blue; */
+    width: 45%;
+}
+
+
+#text_editor_class_container{
+    width:100%;
+    margin: 15px 0px;   
+    font-size: 20px;
+    /* background-color: #00b600; */
+}
+ 
+#note_class_label{
+    color:white;
+}
+
+#text_editor_root #class_select{
+    padding:  10px 25px ;
+    background: rgb(62 62 62);
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+#text_editor_subject_name_container{
+	direction:rtl;
+	 color:white;
+	width:100%;
+    /* background-color: #00b600; */
+}
+#text_editor_subject_name_label{
+    font-size: 20px;
+}
+
+#text_editor_select_subject_name{
+	background:rgb(62 62 62);
+	padding: 10px 25px;
+	text-align:center;
+	border-radius:5px;
+    color: white;
+    border: none;
+}
+
+#text_editor_note_name_container{
+ color:white;	
+ width: 100%;
+ margin: 15px 0px;
+ /* background-color: #00b600; */
+}
+
+#text_editor_note_name_container label{
+    font-size: 20px;
+}
+
+#text_editor_note_name{
+	width:80%;
+	padding:10px;
+	border-radius:5px;
+	border:none;
+    font-size: 17px;
+   background-color:rgb(62 62 62);
+   color:white;
+}
+
+#text_editor_note_name_hint{
+  color:rgb(202, 202, 202);
+  font-size:13px;
+  margin-top:5px;
+}
+
+#text_editor_note_price_container{
+    direction :rtl;
+    color:white;
+    font-size: 22px;
+    width: 44%;
+}
+
+#text_editor_price_input{
+    width:60%;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    background:rgb(62 62 62);
+    color:white;   
+    text-align: center;
+    font-size:  18px;
+}
+
+#text_editor_input_price_hint{
+    color:rgb(202, 202, 202);
+    font-size: 12px;
+    line-height: 140%;
+    margin-top: 5px;
+}
+
+
+#textEditor{
+ 
+    width:90%;
+    margin: auto;
+}
+
+#textEditor .textEditor_editor{
+border-radius:10px;
+border: 2px solid #00ff6e ;
+outline: none !important;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px; 
+}
+
+#textEditor [class ^="ql-toolbar ql-snow"]{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(180, 180, 180);
+   display: flex;
+   justify-content: center;
+}
+
+#textEditor  [class ^="ql-container ql-snow"]
+{
+    background-color: rgb(210, 210, 210);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+}
+
+.ql-editor.ql-blank::before{
+    width: fit-content;
+    margin-left: auto;
+}
+
+#equation_add_toolbar_container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 90%;
+    /* margin: auto; */
+    margin-top:20px;
+}
+
+#textEditor_toolbar{
+    width: 46% ;
+    min-width: 300px;
+	position: fixed;
+	right:0%;
+	top:250px;
+    height: fit-content;
+    background-color: rgb(33, 33, 33);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: none;
+   justify-content: space-between;
+    margin:auto;
+    z-index: 5;
+    border: 1px solid rgb(0 240 240);
+    border-radius: 5px;
+	animation-duration: 300ms;
+	animation-name :show_texteditor_toolbar;
+	
+    /* padding-bottom: 50px; */
+   
+} 
+@keyframes show_texteditor_toolbar{
+  
+  from{
+    transform: rotateX( 90deg );
+  }
+
+}
+
+
+#equation_edit_section_header ,
+#image_edit_header{
+    width: 100%;
+    direction: rtl;
+    font-size: 20px;
+    padding:5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.533);
+    border-radius: 5px;
+}
+ 
+#textEditor_toolbar .red{
+    background-color: red;
+} 
+#textEditor_toolbar .black{
+    background-color: black;
+}
+#textEditor_toolbar .blue{
+    background-color: blue;
+}
+#textEditor_toolbar .green{
+    background-color: rgb(0, 255, 0);
+}
+#textEditor_toolbar .yellow{
+    background-color: yellow;
+}
+#textEditor_toolbar .aqua{
+ background-color: aqua; 
+}
+#textEditor_toolbar .pink{
+ background-color: rgb(255, 0, 174); 
+}
+ 
+#equation_edit_section{
+    width: 60%;
+    direction: rtl;
+    border-left: 1px solid rgb(0 240 240);
+    background-color: rgba(17, 17, 17, 0.533);
+    color: white;
+    border-bottom-left-radius:5px ;
+}
+
+#equation_related_styles{
+ padding-right:5px;
+ opacity: 0.2;
+ pointer-events: none;
+}
+
+#equation_related_styles button{
+ width: 20px;
+ height: 20px;
+ border: none;
+ cursor: pointer;
+ border-radius: 10px;
+ margin:5px;
+}
+#equation_color_container,
+#equation_size_manager_container{
+    margin:2px;
+    margin-top: 15px;
+}
+	
+#equation_size_manager_container button{
+ border-radius:2px;
+}
+
+#image_edit_section{
+    width: 50%;
+    border-left: 1px solid rgb(0 240 240);
+    direction: rtl;
+    background-color: rgba(17, 17, 17, 0.533);
+    color: white;
+    border-top-right-radius: 5px ;
+    border-bottom-right-radius:5px ;
+}
+
+.textEditor_editor
+{
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    margin-top: 15px;
+ 
+}
+
+.textEditor_editor .ql-editor{
+    min-height: 100px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+}
+
+.textEditor_editor img{
+    cursor: pointer;
+    transition: 50ms;
+}
+ 
+#text_editor_save_button_container{
+    width: 25%;
+    height: fit-content;
+}
+
+#text_editor_save_button{
+    padding:2.5%;
+    margin:7%;
+	color:white;
+    background-color: rgb(0, 153, 153);
+    width: fit-content;
+    font-size: 150%;
+    border-radius: 10px;
+    cursor: pointer;
+    border:none;
+} 
+
+#text_editor_save_button:hover
+{
+    background-color: rgb(0, 221, 221);
+}
+
+#add_equation_button,
+#editing_window_button{
+    padding:5px;
+	color:white;
+    background-color: rgb(0 73 61);
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    border:none; 
+    position: fixed;
+    left:2px;
+    top:150px;
+    opacity: 0.8;
+    display: none;
+}
+
+#editing_window_button{
+    top:200px;
+}
+#add_equation_button:hover,
+#editing_window_button:hover
+{
+    background-color: rgb(0, 156, 156);
+    opacity: 1;
+}
+#add_equation_popup_box{
+    width: 80%;
+    height:400px;
+    min-width: 300px;
+    background-color: rgb(17, 17, 17);
+    position: fixed;
+    left:10%;
+    bottom:0%;
+    z-index: 10;
+    border-radius: 10px;
+     /* opacity: 0; */
+     display: none;
+    animation-duration: 500ms;
+    animation-name: show_up_add_equation_box;
+}
+@keyframes show_up_add_equation_box {
+    from{
+        transform: rotateX(90deg);
+    }
+}
+
+#add_equation_popup_box_row{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+#add_equation_popup_box_row math-field{
+    
+    direction: ltr;
+    min-width: 200px;
+    height: fit-content;
+    display: block;
+    margin:3px 0px;
+    width: 80%;
+    max-width: 700px;
+    background-color: rgb(53, 53, 53);
+    color:rgb(0, 255, 136);
+    outline : 2px solid rgb(0, 255, 136);
+    border : none;
+    font-size: 20px;
+}
+
+#add_equation_black_background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: rgba(0, 0, 0, 0.852);
+    z-index: 10;
+    display:none;
+
+}
+#add_equation_popup_box_close_icon{
+    font-size: 40px;
+    color:white;
+    margin-right: 5px;
+    user-select: none;
+    -webkit-user-drag: none;
+    cursor: pointer;
+}
+
+#add_equation_popup_box_close_icon:hover{
+    color:red;
+}
+
+#text_editor_save_button_hint{
+    direction: rtl;
+    color:rgb(202, 202, 202);
+    line-height: 125%;
+}
+
+#image_size_controller,
+#equation_controller{
+   background-color: rgba(170, 170, 170, 0.695);
+   width: fit-content;
+   position: fixed;
+   left:1px;
+   top:200px;
+   direction: rtl;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;   
+}   
+#equation_controller{
+    top:330px;
+    width:100px;
+}
+
+#image_size_controller:hover{
+   background-color: rgba(209, 209, 209, 0.848) ;
+}
+
+ 
+#input_range_label{
+    width: 100%;
+    display:  block;
+    text-align: center;
+}
+
+#image_size_button,
+#equation_controller_button
+{
+padding:0.5%;
+width: fit-content;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+position: fixed;
+left:1px;
+top:150px;
+color:white;
+background-color: rgb(53, 53, 53);
+font-size: 120%;
+opacity: 0.8;
+display: none;
+}
+
+#equation_controller_button{
+    top:280px;
+}
+ 
+
+#equation_color{
+    width:40px;
+    height:20px;
+    cursor: pointer;
+}
+#image_size_body{
+    margin:10px auto;
+    width: fit-content;
+		opacity:0.2;
+	pointer-events:none;
+}
+
+#image_size_body div{
+    width: 100%;
+    display: flex;
+    margin-top: 2%;
+}
+#text_editor_input_range{
+    display: block;
+    margin: 10px;
+}
+
+#image_size_button:hover{
+ background-color: rgb(100, 100, 100);
+ opacity: 1;
+}
+ 
+#add_equation_text_editor{
+    width: 65%;
+    direction: rtl ;
+}
+#add_equation_text_editor_title{
+  color:white;
+  direction: rtl ;
+  font-size: 160%;
+  text-shadow: 0px 0px 4px white;
+  margin-right:1%;
+}
+#add_equation_text_editor_title_hint{
+    color:rgb(202, 202, 202);
+    font-size: 70%;
+    margin-top:2%;
+    margin-bottom:2%;
+    margin-right:10px;
+    text-shadow: none;
+}
+#text_editor_add_equation_button{
+ 
+   padding:5px 10px;
+   font-size: 20px;
+   border-radius:5px;
+   border: none;
+   cursor: pointer;
+   background-color:  rgb(0, 111, 111);
+   color:white;
+   margin:3px 0px;
+}
+
+#text_editor_add_equation_button:hover{
+    
+    background-color: rgb(0, 153, 153);
+}
+
+#math_equation_api{
+    direction: ltr;
+    width: 80%;
+    margin: auto;
+}
+
+
+#done_button_text_editor{
+    border: none;
+    padding:0.5%;
+    margin-left:42%;
+    margin-bottom:1%;
+    display: inline-block;
+    font-size: 170%;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color:rgba(0, 255, 0, 0.607);
+    color:white;
+}
+#done_button_text_editor:hover{
+    background-color:rgba(0, 255, 0, 0.907);
+}
+
+
+
+#text_editor_check_box_background{
+  position:absolute;
+  background-color:#000000e8;  
+  width:100%;
+  height:100%;
+  top:0px;
+  z-index:100;
+  display:none;
+}
+
+#text_editor_check_box{
+    width:40%;
+    height:400px;	
+    background-color:#1a1919e6;
+    position: fixed;
+    top:20%;
+    left:30%;
+    z-index:101;
+    border-radius:10px;
+    animation-name:text_editor_check_box_show;
+    animation-duration:500ms;
+    display:none;
+}
+
+#text_editor_check_box_title{
+	
+ 
+   color:white;
+   display:flex;
+   justify-content:space-evenly;
+   font-size:200%;
+}
+
+#text_editor_close_icon{
+	color:white;
+	font-size:180%;
+	margin: 5px 0px 0px 5px;
+	cursor:pointer;
+	width:fit-content;
+}
+#text_editor_check_box_inner{
+    color:white;
+   direction: rtl;
+   padding:1%;
+}
+
+@keyframes text_editor_check_box_show {
+	
+	from {
+      transform:rotateY(-90deg);		
+	}	
+}
+
+ 
+#text_editor_check_box_body{
+	/* background-color:red; */
+	width:100%;
+	height:80%;
+}
+
+#text_editor_send_note_button{
+ 
+ position:absolute;
+ left:1%;
+ bottom:1%;
+ padding:1% 4% 1% 4%; 
+ font-size:150%;
+ border:none;
+ border-radius:10px;
+ background-color:#00b600;
+ color:white;
+ cursor:pointer;
+ display:none;
+}
+
+#text_editor_send_note_button:hover{
+	 background-color:#00ff00;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////*/
+ 
+@media print {
+ 
+    #textEditor [class ^="ql-toolbar ql-snow"]{
+ 
+       display: none !important;
+    
+    }
+ 
+    #text_editor_root{
+        height: 800px;
+    }
+    #text_editor_upper_part{
+        display:none !important;
+        }
+        
+        #text_editor_title{
+            display:none !important;
+        }
+        
+        #text_editor_title_hint{
+            display:none !important;
+            
+        }
+        
+        #text_editor_middle_part{
+            display:none !important;
+        }
+        
+        #text_editor_subject_name_class_note_name_container{
+            /* background-color: blue; */
+            display:none !important;
+        }
+        
+        
+        #text_editor_class_container{
+            display:none !important;
+        }
+        
+        #note_class_label{
+            display:none !important;
+        }
+        
+        #text_editor_root #class_select{
+            display:none !important;
+        }
+        
+        #text_editor_subject_name_container{
+            display:none !important;
+        }
+        #text_editor_subject_name_label{
+            display:none !important;
+        }
+        #text_editor_select_subject_name{
+            display:none !important;
+        }
+        
+        #text_editor_note_name_container{
+            display:none !important;
+        }
+        #text_editor_note_name_container label{
+            display:none !important;
+        }
+        
+        #text_editor_note_name{
+            display:none !important;
+        }
+        #text_editor_note_name_hint{
+            display:none !important;
+        }
+        
+        #text_editor_note_price_container{
+            display:none !important;
+        }
+        #text_editor_price_input{
+            display:none !important;
+        
+        }
+        #text_editor_input_price_hint{
+            display:none !important;
+         
+        }
+        
+        #textEditor{
+         
+            width:100%;
+ 
+            height: 100%;
+           
+            top:0px;
+            right:0px;
+        }
+        
+ 
+        #textEditor [class ^="ql-toolbar ql-snow"]{
+            display:none !important;
+        }
+        #textEditor  [class ^="ql-container ql-snow"]
+        {
+            background-color: rgb(210, 210, 210);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px; 
+            width: 100%;
+            height: 100%;
+        }
+        #equation_add_toolbar_container{
+            display:none !important;
+        }
+        #textEditor_toolbar{
+            display:none !important;
+            
+            /* padding-bottom: 50px; */
+           
+        } 
+ 
+        
+        
+        #equation_edit_section_header ,
+        #image_edit_header{
+            display:none !important;
+        }
+        
+         
+        #equation_edit_section{
+            display:none !important;
+        }
+        
+        #equation_related_styles{
+            display:none !important;
+        }
+        
+        #equation_related_styles button{
+            display:none !important;
+        }
+        #equation_color_container,
+        #equation_size_manager_container{
+            display:none !important;
+        }
+            
+        #equation_size_manager_container button{
+            display:none !important;
+        }
+        
+        #image_edit_section{
+            display:none !important;
+        }
+        
+        .textEditor_editor
+        {
+            width: 100%;
+            height: 100%;
+            border: none !important;
+
+       
+         
+        }
+        
+        .textEditor_editor .ql-editor{
+             width: 100%;
+             height: 100%;
+        }
+        
+        .textEditor_editor img{
+            cursor: pointer;
+        }
+         
+        #text_editor_save_button_container{
+            display:none !important;
+        }
+        
+        #text_editor_save_button{
+            display:none !important;
+        } 
+        
+ 
+        
+        #add_equation_button,
+        #editing_window_button{
+            display:none !important;
+        }
+        
+        #editing_window_button{
+            display:none !important;
+        }
+ 
+        #add_equation_popup_box{
+            display:none !important;
+        }
+        
+  
+        #add_equation_black_background{
+            display:none !important;
+        
+        }
+        #add_equation_popup_box_close_icon{
+            display:none !important;
+        
+        }
+        .math_hidden_equation{
+            display:none !important;
+        }
+        
+        #math_ml{
+            display: none !important;
+        }
+        
+        #text_editor_save_button_hint{
+            display:none !important;
+        }
+        
+        #image_size_controller,
+        #equation_controller{
+            display:none !important;
+        }   
+        #equation_controller{
+            display:none !important;
+        }
+        
+   
+        
+         
+        #input_range_label{
+            display:none !important;
+        }
+        
+        #image_size_button,
+        #equation_controller_button
+        {
+            display:none !important;
+        }
+        
+        #equation_controller_button{
+            display:none !important;
+        }
+         
+        
+        #equation_color{
+            display:none !important;
+        }
+        #image_size_body{
+            display:none !important;
+        }
+        
+        #image_size_body div{
+            display:none !important;
+        }
+        #text_editor_input_range{
+            display:none !important;
+        }
+        
+  
+         
+        #add_equation_text_editor{
+            display:none !important;
+        }
+        #add_equation_text_editor_title{
+            display:none !important;
+        }
+        #add_equation_text_editor_title_hint{
+            display:none !important;
+        }
+        #text_editor_add_equation_button{
+         
+            display:none !important;
+        }
+      
+        
+        #math_equation_api{
+            display:none !important;
+        }
+        
+        /*//////////////////////////////////////////////////////////*/
+        .wrs_header span.wrs_selected,
+        [class ^="wrs_imageContainer wrs_button wrs_colorChooser"],
+        [title *="Press Ctrl+C to copy the selection"],
+        [title *="Press Ctrl+X to cut the selection"],
+        [title *="Press Ctrl+V to paste the content of the clipboard"],
+        [title *="Press Ctrl+X to cut the selection"],
+        [title *="Press Ctrl+X to cut the selection"],
+        [title *="Press Ctrl+X to cut the selection"] 
+        {
+            display: none !important;
+        }
+        .wrs_panelContainer 
+        {
+            display:none !important;
+        }
+         
+        .wrs_header > button{
+            display:none !important;
+        }
+        
+        .wrs_panelContainer td    {
+            display:none !important;
+         
+        }
+        
+        .wrs_header {
+            display:none !important;
+        }
+         
+        .wrs_panelContainer .wrs_select ,
+        .wrs_header  .wrs_context ,
+        .wrs_toolbar .wrs_linksContainer,
+        input[title="Go to handwritten mode"]{
+            display: none !important; 
+ 
+        }
+         
+        .wrs_formulaDisplayWrapper{
+            display:none !important;
+        
+        }
+        .wrs_editor .wrs_toolbar .wrs_header > button{
+            display:none !important;
+        }
+        .wrs_editor .wrs_toolbar .wrs_header > button:hover{
+            display:none !important;
+        }
+        .wrs_editor .wrs_toolbar .wrs_header > button.wrs_selected{
+            display:none !important;
+        }
+        .wrs_editor .wrs_panelContainer{
+            display:none !important;
+        }
+        .wrs_editor.wrs_withHand:not(.wrs_handDisabled):not(.wrs_toolbarHidden) .wrs_formulaDisplayWrapper {
+            display:none !important;
+        }  
+        .wrs_editor.wrs_flexEditor .wrs_formulaDisplay {
+            display:none !important;
+        }
+        /*//////////////////////////////////////////////////////////*/
+        
+        #done_button_text_editor{
+            display:none !important;
+        }
+   
+        
+        
+        
+        #text_editor_check_box_background{
+            display:none !important;
+        }
+        
+        #text_editor_check_box{
+            display:none !important;
+        }
+        
+        #text_editor_check_box_title{
+            display:none !important;
+        }
+        
+        #text_editor_close_icon{
+            display:none !important;
+        }
+        #text_editor_check_box_inner{
+            display:none !important;
+        }
+ 
+        
+        
+         
+        #text_editor_check_box_body{
+            /* background-color:red; */
+            display:none !important;
+            
+        }
+        #text_editor_send_note_button{
+         
+         display:none !important; 
+        }
+ 
+         #footer_root   {
+            display:none !important;
+         }
+         #header_root   {
+            display:none !important;
+         }
+        
+}

@@ -1,0 +1,184 @@
+#single_note_view_upper_part{
+ 
+    width:100%;
+    height: 150px;
+    background-color: #111111; 
+}
+#single_note_view_root{
+    width: 90%;
+    height: fit-content;
+    background-color: rgb(30, 30, 30);
+    margin: auto;
+    margin-bottom:5%;
+    border-radius: 20px;
+    padding-bottom:50px;
+    position: relative;
+}
+#single_note_view_title{
+    font-size: 200%;
+    color:white;
+    padding: 1%;
+    text-shadow: 0px 0px 5px white;
+   	 direction: rtl;
+	 margin-right:30px;
+}
+#single_note_view_body{
+    background-color: rgb(46 46 46);
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    width:95%;
+    margin: auto;
+    border-radius: 15px;
+	 direction: rtl;
+    
+}
+#single_note_first_part ,
+#note_name,
+#single_note_last_part
+{
+    width:100%;
+    margin: 1%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#single_note_first_part div ,
+#note_name,
+#single_note_last_part div 
+{
+    background-color: rgb(0, 73, 61);
+    padding:15px;
+    margin:15px;
+    border-radius: 10px;
+}
+
+#note_name{
+    width:fit-content;
+    margin:auto;
+}
+
+#open_note_button{
+ 
+	margin:30px;
+    padding:15px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color:white;
+    background-color: rgba(0, 130, 0, 0.541);
+    
+}
+#open_note_button:hover{
+    background-color: rgb(18, 219, 0);
+}
+#single_note_black_background{
+    width:100%;
+    height:100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.74);
+    position: fixed ;
+    top:0px;
+    left:0px;
+	display:none;
+}
+
+#single_note_confirm_box{
+    width:36%;
+    height: 400px;
+    background-color: rgb(31, 30, 30);
+    z-index: 101;
+    position: fixed ;
+    top:20%;
+    left:32%;
+    border-radius: 10px;
+	display:none;
+    animation-duration: 800ms;
+    animation-name: show_note_confirm_box;
+    direction: rtl;
+}
+
+@keyframes show_note_confirm_box {
+    from{
+        transform: translateY(500px);
+    }
+}
+
+#single_note_confirm_box_close_icon{
+    width: fit-content;
+    font-size: 250%;
+    cursor: pointer;
+    color:white;
+    margin-right: 10px;
+ }
+ #single_note_confirm_box_close_icon:hover{
+  color:red;
+ }
+
+ #single_note_confirm_box_title{
+    color:white;
+    width: fit-content;
+    margin: auto;
+ }
+
+#confirm_box_price{
+width:100%;
+color:white;
+font-size:20px;
+display: flex;
+justify-content: space-between;
+width: 90%;
+margin: 15px auto;
+}
+
+#single_note_pay_button{
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #85002a;
+    color:white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#single_note_pay_button:hover{
+    background-color: #db0045;
+}
+
+#single_note_payment_processing_section_container{
+
+color: white;
+display: none;
+justify-content: space-evenly;
+flex-wrap: wrap;
+width: 60%;
+margin: 15px auto;
+}
+
+#single_note_payment_processing_section_container #payment_processing_title{
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+#go_to_read_page_button{
+	padding:10px;
+	color:white;
+	background-color: rgb(0, 70, 60);
+	border-radius: 10px;
+	font-size: 18px;
+	border:none;
+	cursor: pointer;
+	position: absolute ;
+	bottom:5%;
+	left:31%;
+	text-decoration: none;
+}
+
+#go_to_read_page_button:hover{
+    background-color: rgb(0 153 130);
+}
+ 
+
+/*///////////////////////////////////////////////////////////*/
+
+ 

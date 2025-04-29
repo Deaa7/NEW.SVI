@@ -1,0 +1,111 @@
+#subject_section_root{
+    margin-top: 10px;
+    margin: auto;
+    width: 90%;
+    height: fit-content;
+    background-color: rgba(12, 12, 12, 0.718);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top:2%;
+ 
+ 
+}
+#subject_section_root [class *='12'] ,
+#subject_section_root [class *='9'] {
+ 
+    width: 280px;
+    height: 380px;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 15px;
+    opacity: 0.9;
+    margin : 1%;
+    cursor: pointer;
+    box-shadow: inset 5px 5px 50px black;
+    transition: 200ms;
+}
+
+
+
+ /*   just for background-image styling : */
+
+ .math_12th{
+    background-image: url('./_12th book images/1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+}  
+ 
+.physics_12th{
+    background-image: url('./_12th book images/3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}  
+.science_12th{
+    background-image: url('./_12th book images/4.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}  
+.chemistry_12th{
+    background-image: url('./_12th book images/5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
+.arabic_12th{
+     background-image: url('./_12th book images/6.jpg'); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
+.islam_12th{
+    background-image: url('./_12th book images/7.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
+.english_12th{
+    background-image: url('./_12th book images/8.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}  
+ 
+
+
+
+@media (max-width:700px) {
+
+    #subject_section_root{
+        margin-top: 10px;
+        margin: auto;
+        width: 90%;
+        height: fit-content;
+        background-color: rgba(128, 128, 128, 0.222);
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top:2%;
+        margin-bottom:10%;
+     
+    }
+    #subject_section_root [class *='12'] ,
+    #subject_section_root [class *='9'] {
+     
+        width: 30%;
+        height: 140px;
+        box-shadow: 0px 0px 5px black;
+        border-radius: 3px;
+        opacity: 0.9;
+        margin : 1%;
+        cursor: pointer;
+    }
+}
+

@@ -1,0 +1,269 @@
+
+#teacher_own_profile_upper_part{
+    height: 150px;
+    background-color: #090909;
+}
+#teacher_own_profile_root{
+background-color: #090909;
+min-height:1000px ;
+height: fit-content;
+color:white;
+direction: rtl;
+position: relative;
+
+}
+#edit_teacher_info_profile{
+    font-size: 25px;
+    width: fit-content;
+    background-color: rgb(40, 40, 40);
+    padding: 5px 10px;
+    position: absolute;
+    left:36px;
+    top: -60px;
+    border: none;
+    outline: none;
+    color:white;
+    cursor: pointer;
+   border-radius:5px;
+}
+#edit_teacher_info_profile:hover{
+    background-color: #585858;
+}
+
+#teacher_own_profile_first_part_img_bio_container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#teacher_own_profile_first_part{
+    width:70%;
+}
+#teacher_own_profile_root #teacher_name {
+ 
+    background-image: linear-gradient(50deg, #00d5ff ,#00ff80, #00d5ff ,#00ff80 );
+    font-size: 60px;
+    color:transparent;
+    background-clip: text;
+     text-indent: 15px;
+     width: fit-content;
+     font-variant: all-petite-caps;
+    }
+    
+    @keyframes show_teacher_name{
+        from{
+            opacity: 0;
+        }
+    }
+    
+#teacher_subject_name{
+    background-image: linear-gradient(50deg, #00d5ff ,#00ff80, #00d5ff ,#00ff80 );
+    font-size: 35px;
+    color:transparent;
+    background-clip: text;
+    text-indent: 40px;
+    font-variant: all-petite-caps;
+}
+
+#teacher_own_profile_root #teacher_phone_numbers{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 20px;
+    
+}
+
+#teacher_own_profile_root #contact_teacher_section{
+ width: 70%;
+ display: flex;
+ justify-content: space-evenly;
+ flex-wrap: wrap;
+ margin: auto;
+ margin-top: 30px;
+
+}
+
+#teacher_own_profile_root .link{
+    width: 40%;
+    margin: 5px;
+    color:rgb(209, 209, 209);
+    display: block;
+    font-size: 17px;
+}
+
+#teaching_school_institution{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    font-size: 17px;
+    width: 80%;
+}
+#teacher_own_profile_root #teaching_school_institution div{
+    margin-top: 5px ;
+}
+
+#teacher_city_and_date_created_container{
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    margin:  25px 0px;
+}
+
+#teacher_own_profile_root #current_total_net{
+ 
+    margin: auto;
+    margin-top: 25px;
+    background-image: linear-gradient(50deg, #00d5ff ,#00ff80, #00d5ff ,#00ff80 );
+    background-clip: text;
+    color:transparent;
+    border: 2px solid gray;
+    font-size: 25px;
+    width: fit-content;
+    padding: 15px 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+#teacher_own_profile_root #pay_ability_text{
+    font-size: 15px;
+    color:gray;
+   position: absolute;
+  right:2px;
+  bottom:-28px;
+}
+
+#teacher_image_bio_container{
+width: fit-content;
+margin-right: auto;
+margin-left:10px;
+}
+
+#teacher_own_profile_root #teacher_image{
+border-radius:  10px;
+box-shadow:  0px 0px 36px  1px rgba(0, 255, 136, 0.274);
+width: 300px;
+background-color: rgb(0, 75, 60);
+margin-bottom: 15px;
+}
+
+#teacher_own_profile_root #teacher_bio{
+ width: 300px;
+ height: fit-content;
+ max-height: 150px;
+ color:rgb(0, 183, 180);
+ text-align: center;
+ overflow-y: auto;
+ line-height: 20px;
+ border-radius: 5px;
+ border: 1px solid rgba(128, 128, 128, 0.348);
+}
+
+#teacher_own_profile_number_of_exams_and_notes_container{
+    /* background-color: red; */
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+#exams_table_title_container  ,
+#notes_table_title_container{
+    width: 95%;
+    margin : 50px auto;
+}
+
+#teacher_own_profile_root #exam_table_container , 
+#teacher_own_profile_root #note_table_container{    
+    height: fit-content;
+    overflow: auto;
+}
+
+#teacher_own_profile_root #exam_table_title,
+#teacher_own_profile_root #note_table_title{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color:#00fdb1;
+}
+#teacher_own_profile_root #exam_content_view_table ,
+#teacher_own_profile_root #note_content_view_table{
+    width: 100%;
+    border: 1px solid gray;
+  border-collapse: collapse;
+}
+ 
+#exam_content_view_table tr ,
+#exam_content_view_table th ,
+
+#note_content_view_table tr,
+#note_content_view_table th{
+    border: 1px solid gray;
+    background-color: rgb(19, 19, 19);
+}
+
+#teacher_own_profile_root #exam_content_view_table .editing_cell ,
+#teacher_own_profile_root #exam_content_view_table .delete_cell{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 90ms;
+}
+#teacher_own_profile_root #exam_content_view_table .editing_cell
+{
+    border-right: 1px solid gray;
+}
+#teacher_own_profile_root #exam_content_view_table .editing_cell:hover
+{
+/* #note_content_view_table tr:hover{ */
+background-color:  rgb(0, 70, 50) ;
+/* background-image: linear-gradient(50deg, #00ff8058,rgb(0, 70, 60)    ); */
+}
+#teacher_own_profile_root #exam_content_view_table .delete_cell:hover 
+{
+    background-color:  rgb(135, 13, 0) ;
+
+}
+#teacher_own_profile_root table tr {
+    cursor: auto;
+}
+
+#exam_content_view_table td,
+#exam_content_view_table th,
+#note_content_view_table td,
+#note_content_view_table th{
+    text-align: center;
+    padding: 15px 10px;
+    /* min-width: 200px; */
+}
+td.editing_cell{
+    cursor: pointer;
+}
+#exam_loading_cell_container,
+#note_loading_cell_container{
+    padding: 0px !important;
+   display: table-cell;
+}
+.loading_row{
+    padding:30px;
+    text-align: center;
+    font-size: 30px;   
+    background-color: rgb(19, 19, 19);
+    display: flex;
+   justify-content: center;
+
+}
+.loading_row .loading_title{
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+#teacher_own_profile_no_exams_yet,
+#teacher_own_profile_no_notes_yet{
+    font-size: 30px;
+    width: fit-content;
+    color: rgb(202, 202, 202);
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.136);
+}

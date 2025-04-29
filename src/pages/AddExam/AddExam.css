@@ -1,0 +1,892 @@
+#questions_container img
+{
+-webkit-user-drag: none;
+cursor: pointer;
+}
+
+#upper_part_add_exam{
+    background-color:#111111;
+    width: 100%;
+    height: 100px;
+}
+
+#add_exam_root{
+
+   background-color:#111111;
+   width: 100%;
+   height: fit-content;
+   margin-bottom: 5%;
+   direction: rtl;
+
+}
+
+#add_exam_title{
+    color: white;
+    font-size: 30px;
+    text-indent: 5%;
+}
+
+#add_exam_first_part_section{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    width: 98%;
+    margin:auto;
+}
+
+#add_subject_and_exam_name{
+    width: 50%;
+    min-width: 500px;
+    flex-wrap: wrap;
+    margin-top: 4%;
+    margin-bottom: 10%;
+    height: fit-content;
+}
+
+#subject_name_container{
+    width: 40%;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+#exam_name_container{
+    width: 80%;
+    min-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    /* background-color: red; */
+}
+ 
+#exam_name{
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+    background-color: rgb(62 62 62) ;
+    color:white;
+    border: 2px solid black ;
+    font-size: 80%;
+}
+ 
+#hint_refresh_add_test
+{
+    width:30%;
+    color:rgba(255, 255, 255, 0.715);
+    line-height: 180%;
+    margin-right: 15px;
+}
+#exam_name_hint{
+    color:rgba(255, 255, 255, 0.833);
+    font-size: 70%;
+    margin-top: 1%;
+}
+#add_exam_root #class_container{
+    width: 30%;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    /* background-color: red; */
+}
+
+#add_exam_root #select_subject_name ,
+#add_exam_root #units_select,
+#add_exam_root #class_select{
+    padding: 15px;
+    font-size: 18px;
+    background-color: rgb(62 62 62);
+    color:white;
+    border-radius: 5px;
+    border: none;
+    display: inline-block;
+    width: fit-content;
+    max-height: 50px;
+}
+
+#units_select{
+    padding:0.5%;
+}
+optgroup{
+    color:white;
+    background-color: rgb(72, 72, 72);
+    text-align: center ;
+}
+option{
+    color:white;
+    background-color: rgb(31, 30, 30);
+    text-align: start ;
+}
+
+#subject_name_word  ,
+#units_section #add_unit_title,
+#exam_name_label ,
+#class_title{
+    padding: 1%;
+    font-size: 22px;
+    color:white;
+}
+
+#first_part_units{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap ;
+    height: fit-content;
+    margin: 15px auto;
+}
+
+#units_section{
+    margin-top: 2%;
+    color:white;
+    width: 50%;
+}
+
+#second_part_units{
+    width:90%; 
+    margin:auto;
+    border-radius: 10px;
+    position: relative;
+}
+
+#units_subject_title{
+  font-size: 22px;
+      display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+#units_subject_container{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    background-color: rgb(30 30 30);
+    border-radius: 5px;
+}
+#add_test_title{
+    color:white;
+    text-shadow: 0px 0px 3px white;
+    margin: 50px 5px;
+    font-weight: normal;
+}
+#add_test_title_hint{
+    color:#cccccc;    
+}
+.single_unit_container{
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(0 0 0 / 33%);
+    margin: 5px;
+    border : 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+.delete_unit_button{
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 10px;
+     color: gray;
+    }
+
+  .single_unit_container:hover .delete_unit_button{
+    opacity: 1;
+}
+
+#units_hint{
+    font-size:90%;		
+    color:#cccccc;
+    margin-bottom:15px;
+   }
+.delete_unit_button:hover{
+    text-shadow: 0px 0px 5px white;
+    color:white;
+}
+#exam_price_container{
+ width: 80%;
+ min-width:450px;
+ display: flex;
+ justify-content: space-between;
+ margin-top: 15px;
+ /* background-color: red; */
+}
+#exam_price_label{
+    font-size: 22px;
+    color:white;
+    margin-top: 5px;
+}
+#exam_price_container span{
+    color:white;
+    font-size: 22px;  
+    margin-top: 5px;  
+}
+#exam_price{
+    width: 50%;
+    padding:0px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(62 62 62);
+    color:white;
+}
+#exam_price_hint{
+    color:rgba(255, 255, 255, 0.64);
+    font-size: 80%;
+    margin-right:15px;
+    margin-top:5px;
+}
+#add_test_root{
+    width: 95%;
+    margin-top: 5%;
+    height: fit-content;
+    min-height: 100px;
+    position: relative;
+    margin:auto;
+    margin-top:15px;
+    direction: rtl;
+}
+
+
+
+
+ /*  general toolbar */
+/* /////////////////////////////////////////////////////////////////////////////////// */
+    
+#AddExam_toolbar{
+    width: 50%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.921);
+    border-radius: 10px;
+    position: fixed;
+    top:30%;
+    right:0%;
+    display: none;
+    justify-content: space-between;
+    direction: ltr ;
+    z-index: 1000;
+    animation-duration: 400ms;
+    animation-name: AddExam_toolbar_animation;
+    }
+
+@keyframes AddExam_toolbar_animation{
+    from{
+        transform: rotateX(90deg);
+    }
+}
+ 
+#AddExam_equation_edit_section_header ,
+#AddExam_image_edit_header{
+    width: 100%;
+    direction: rtl;
+    font-size: 20px;
+    padding:5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.321);
+}
+ 
+#AddExam_toolbar .red{
+    background-color: red;
+} 
+#AddExam_toolbar .black{
+    background-color: black;
+}
+#AddExam_toolbar .blue{
+    background-color: blue;
+}
+#AddExam_toolbar .green{
+    background-color: rgb(0, 255, 0);
+}
+#AddExam_toolbar .yellow{
+    background-color: yellow;
+}
+#AddExam_toolbar .aqua{
+ background-color: aqua; 
+}
+#AddExam_toolbar .pink{
+    background-color: rgb(255, 0, 174); 
+   }
+
+#AddExam_equation_edit_section{
+    width: 50%;
+    direction: rtl;
+    background-color:  rgba(56, 56, 56, 0.321);
+    color: white;
+    border:1px solid rgb(0 240 240);
+    /* border-radius: 5px; */
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#AddExam_equation_related_styles{
+ padding-right:5px;
+ opacity: 0.2;
+ pointer-events: none;
+}
+#AddExam_equation_related_styles button{
+ width: 20px;
+ height: 20px;
+ border: none;
+ cursor: pointer;
+ border-radius: 10px;
+ margin:5px;
+}
+
+#AddExam_equation_color_container,
+#AddExam_equation_size_manager_container{
+    margin:2px;
+    margin-top: 15px;
+}
+ 
+	
+#AddExam_equation_size_manager_container button{
+ border-radius:2px;
+}
+
+#AddExam_image_edit_section{
+    width:50%;
+    /* border-left: 1px solid white; */
+    border:1px solid rgb(0 240 240);
+    /* border-radius: 5px; */
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    direction: rtl;
+	background-color:  rgba(56, 56, 56, 0.321);
+    color: white;
+
+}
+#AddExam_image_size_body{
+		opacity:0.2;
+	pointer-events:none;
+    width: 80%;
+    margin: auto;
+    /* display: flex; */
+}
+#range_and_span_container{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+   margin-top: 5%;
+}
+#AddExam_input_range{
+        display: block;
+        margin: 0px 5%;
+    }       
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#questions_container{
+    padding-bottom: 5%;
+    direction: rtl;
+}
+ 
+.question_body{
+    background-color: #1e1e1e;
+    margin: auto;
+    margin-bottom:3%;
+}
+
+.question_content_container{
+ 
+    background-color:#151515;
+    padding:1%;
+    position: relative;
+    height: fit-content;
+    /* background-color:red; */
+    width: 100%;
+}
+.question_body button{
+  padding:5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px ;
+  margin-right: auto;
+  background-color: rgb(186 186 186 / 44%);
+  color:white;
+  font-size: 15px;
+  display: block;
+}
+
+ .question_option_section{
+    display: flex;
+    direction: rtl;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #1e1e1e;
+}
+.question_option_A_label,
+.question_option_B_label,
+.question_option_C_label,
+.question_option_D_label,
+.question_option_E_label
+{
+    direction: rtl;   
+    color:white;
+    font-size: 130%;
+    padding-bottom:15px;
+
+}
+
+.question_option_A_container,
+.question_option_B_container,
+.question_option_C_container,
+.question_option_D_container,
+.question_option_E_container{
+    display: flex;
+    flex-direction: column; 
+    height: fit-content;  
+    width: 90%;
+    margin-top: 5px	;
+
+}
+
+
+/* 
+.question_option_section [contentEditable="true"] {
+    background-color: white;
+    min-height: 80px;
+    width: 100%;
+    max-width: 650px;
+    min-width: 600px;
+    margin:2% 0%;
+    border-radius: 5px;
+    padding:5px;
+}
+  */
+
+/* [class ^="quill question_option_A"]
+{
+    background-color: white;
+    width: 500px;
+    height: 200px;
+} */
+
+[ class ^="quill question_text_content_container"] .ql-editor::before , 
+[class ^="quill question_option_"] .ql-editor::before , 
+[class ^="quill explanation"] .ql-editor::before{
+ 
+    width: fit-content;
+    direction: rtl !important;
+    margin-left: auto;
+}
+
+[class ^="quill question_text_content_container"],
+[class ^="quill question_option_"],
+[class ^="quill explanation"]
+{
+    background-color:  rgba(255, 255, 255, 0.923);
+    /* height: fit-content; */
+    /* min-height: 130px; */
+    direction: ltr;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: 80ms;
+}
+ 
+[ class ^="quill question_text_content_container"] .ql-editor , 
+[class ^="quill question_option_"] .ql-editor , 
+[class ^="ququestion_option_E_labelill explanation"] .ql-editor{
+    min-height: 80px;
+}
+
+[ class ^="quill question_text_content_container"] .ql-toolbar  , 
+[class ^="quill question_option_"] .ql-toolbar  , 
+[class ^="quill explanation"] .ql-toolbar 
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+[class ^="quill question_text_content_container"] .ql-editor 
+{
+    /* min-height: 70px; */     
+    background-color: rgba(255, 255, 255, 0.923)!important;
+}
+[class ^="ql-toolbar ql-snow"]  
+ {
+    background-color: rgba(255, 255, 255, 0.923) !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.quill  .ql-editor{
+    background-color: rgba(255, 255, 255, 0.923) !important;
+}
+ 
+
+.add_test_question_number{
+    font-size: 150%;
+    padding: 1%;
+padding: 1%;
+background-color:rgb(0 73 61);
+border-bottom-left-radius: 10px;
+width: fit-content;
+color: white;
+text-shadow: 0px 0px 5px white;
+
+}
+
+
+ 
+[class ^='question_text_content_container']{
+ 
+    width: 95%;
+    margin: auto;
+    direction: rtl;
+    height: fit-content;
+    /* min-height: 150px; */
+    min-width:300px;
+    background-color: white;
+    border-radius: 5px;
+    padding:10px;
+}
+.add_question_label{
+    font-size: 150%;
+    padding: 1%;
+    color:white;
+}
+
+ 
+ 
+.options_and_answers_section{
+    display: flex;
+    justify-content: center;
+  flex-wrap: wrap;
+}
+.select_right_option_Container{
+   
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: auto;
+    padding:1%;
+}
+
+[class ^="question_right_option"]{  /* select option*/
+ padding:0.5% 10%;    
+ border-radius: 5px;
+ text-align: center;
+ font-size: 140%;
+ background-color: rgb(62 62 62);
+ color:white;
+}
+
+.right_option_label{
+    color:white;
+    font-size: 140%;
+}
+
+/* .explanation_container [contentEditable="true"]{
+    width:95%;
+    margin: auto;
+    margin-top: 1%;
+    background-color: white;
+    border-radius: 5px;
+   
+} */
+
+.explanation_container{
+    width: 100%;
+    padding: 0% 1% 1% 1%;
+    /* height: fit-content; */
+    direction: ltr  ;
+}
+.explanation_label{
+    font-size: 120%;
+    color:white;
+    width: fit-content;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1%;
+   margin-left: 85%;
+}
+
+#add_test_button,
+#delete_test_button{
+    padding: 10px 15px;
+    color:white;
+    background-color:rgb(0, 70, 60);
+    width: fit-content;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute; 
+    left: 2%;
+    bottom: 15px    ;
+    border:none;
+}
+#delete_test_button{
+    right:2%;
+    background-color: rgb(108, 0, 0);
+}
+#add_test_button:hover
+{   
+    background-color: rgb(0, 146, 124);
+}
+#delete_test_button:hover{
+    background-color: rgb(169, 0, 0);
+}
+ 
+#math_api{
+    width: 100%;
+    height: 360px;
+    position:  fixed;
+    bottom:0%;
+    margin:auto;    
+    direction:rtl;
+    z-index: 1;
+	display:none;
+      background-color: rgb(17, 17, 17);
+     animation-duration: 300ms;
+     animation-name: show_math_api_addExam;
+
+     
+}
+#math_api_row{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    direction: ltr !important;
+}
+@keyframes show_math_api_addExam{
+    from {
+        transform: translateY(500px);
+    }
+}
+ 
+#show_hide_math_api{
+    padding:10px;
+    border-radius: 5px  ;
+    background-color: rgb(0 73 61);
+    color:white ;
+    width: fit-content;
+    cursor: pointer;
+    position:  fixed;
+    bottom:420px;
+    left:0%;
+    border: none;
+	opacity:0.3;
+    display: none;
+
+
+}
+#show_hide_math_api:hover
+{
+    opacity: 1;
+  
+}
+#editorContainer{
+    height: 80%;
+}
+#math_api #add_equation_button_AddExam{
+    border: none;
+    font-size: 18px;
+    color:white;
+    border-radius: 5px;
+    background-color:rgb(0 50 42);
+    padding:12px 20px;
+    cursor: pointer;
+    margin-top:3px;
+    height: fit-content;
+}
+#math_api #add_equation_button_AddExam:hover{
+background-color: rgb(0, 153, 153);
+}
+#math_api button:hover{
+    background-color: rgb(0, 0, 0);
+}
+ 
+
+#add_test_errors{
+    color:white;
+    background-color: rgba(255, 0, 0, 0.847); 
+    padding:1% 5%;
+    z-index: 10;
+     border-radius: 10px;
+    position: fixed;
+    bottom:2%;
+    left:3%;
+    font-size: 120%;
+    display: none;
+}
+#show_exam_box_button{
+    padding:1%;
+    color:white;
+    background-color: rgba(0, 157, 0, 0.308);
+    font-size: 140%;
+    width: fit-content;
+    border-radius: 10px;
+    margin:auto;
+    margin-bottom:1%;
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+#show_exam_box_button:hover{
+    background-color: rgba(0, 172, 0, 0.873);
+}
+
+#send_exam_black_background{
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.808);
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    z-index: 400;
+    display:none;
+}
+#send_exam_check_box{
+    width: 40%;
+    min-height: 60%;
+    background-color: rgb(17, 17, 17);
+    position: fixed;
+    top:20%;
+    left:30%;
+    z-index: 401;
+    border-radius: 10px;
+    animation-duration: 400ms;
+    overflow: auto ;
+    color:white;
+    display: none;
+    direction: rtl;
+
+}
+
+
+@keyframes show_up_add_exam {
+    from{
+        transform: rotateY(90deg);
+    }
+}
+#send_exam_close_icon{
+    font-size: 40px;
+    margin:1%;
+    cursor: pointer ;
+    width: fit-content;
+    
+ 
+}
+#send_exam_close_icon:hover{
+  color: red;
+}
+#send_exam_check_box #send_exam_loading_title{
+ 
+    width: 80%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    direction: ltr;
+    font-size: 30px;
+}
+#send_exam_check_box #send_exam_loading_title #spinner{
+    margin-right: 10px;
+}
+#send_exam_status{
+ 
+    display: none; 
+}
+#send_exam_status_title{
+
+    font-size: 25px;
+    width: 80%;
+    margin: auto;
+}
+#send_exam_body_section{
+    font-size: 150%;
+    width: 95%;
+    height: 200px;
+    margin: auto;
+    border-radius: 5px;
+    direction: rtl;
+    background-color:#1e1e1e;
+    overflow: auto;
+    margin-top:2%;
+}
+#send_exam_body_section .exam_info{
+    font-size: 80%;
+    padding:1%;
+    line-height: 30px;
+}
+#send_exam_body_section .exam_info span{
+ color:rgba(0, 255, 255, 0.647);
+}
+#send_exam_button{
+    background-color: rgb(3, 210, 3);
+    width:fit-content;
+    padding: 2%;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 140%;
+    position: absolute;
+    left:1%;
+    bottom:1%;
+    display: none;
+}
+#add_exam_toolbar_show_hide_button{
+  position: fixed;
+  bottom:470px;
+  cursor:pointer;
+  color:white;
+  background-color:rgb(0 73 61);
+  padding: 6px 12px;
+  border-radius:5px;
+  border:none;
+  opacity:0.3;
+  font-size: 105%;
+  display: none;
+}
+#add_exam_toolbar_show_hide_button:hover
+{
+  opacity:1;
+}
+#Add_exam_image_size_controller{
+  background-color:#111111af;
+  width:fit-content;
+  position: fixed;
+  left:0%;
+  bottom:50%;
+  display: none;
+  color:white;
+  direction:rtl;
+  padding:5px;
+  border-radius:5px;
+}
+ 
+#math_api math-field{
+    direction: ltr;
+    margin-top:5px;
+    height: fit-content;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    font-size: 16px;
+    background-color: rgb(53, 53, 53);
+    color:rgb(0, 255, 136);
+    outline : 2px solid rgb(0, 255, 136);
+    border : none;
+   font-size: 20px;
+}
+math-field::part(menu-toggle) {
+    display: none;
+  }
+
+/*//////////////////////////////////////////////////////*/
+
+
+
+
+
+ 

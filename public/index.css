@@ -1,0 +1,21 @@
+ 
+#root{
+    background-color: #141414;
+    position: relative;
+    height:fit-content;
+    min-height:1000px;
+}
+ 
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:  'Rubik','Segoe UI' ;
+}
+ 
+*::selection{
+    color :rgb(255, 255, 255);
+    background-color: rgb(25, 25, 25);
+}
+
+ 

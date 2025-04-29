@@ -1,0 +1,193 @@
+
+
+#test_package_root{
+	background-color:rgb(22 22 22) ;
+	width:98%;
+	margin:auto;
+    margin-bottom: 50px;
+    padding-bottom: 80px;
+	border-radius:10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+}
+.package_body_background{
+    width: 320px;
+    height: 400px ;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    border-radius:10px ;
+    margin: 10px ;
+    transition: 200ms;
+    box-shadow: 0px 0px 5px black;
+    background-color: rgba(94, 94, 94, 0.214);
+}
+.package_body_background:hover{
+    border: 1px solid rgba(255, 255, 255, 0.47);
+}
+.package_body_background [class^="package_body"]{
+    border-radius:10px ;
+    width: 100%;
+      height:100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color:white;
+    cursor: pointer;
+    text-decoration: none;
+    backdrop-filter: blur(10px);
+}
+ 
+.container_name_and_id ,
+.container_price_and_publisher,
+.container_num_test_and_app_and_price{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 95%;
+}
+.container_name_and_id {
+    margin-top:15px;
+}
+.package_id ,
+.package_name,
+.package_tests_number,
+.package_units,
+.num_of_app,
+.publisher_name,
+.package_date_added{
+
+    background-color:rgb(0 0 0 / 59%);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+ 
+.package_units{
+  
+  line-height: 200%;
+   max-width: 80%;
+   min-width: 60%;
+   display: flex;
+   justify-content: space-evenly;
+   flex-wrap: wrap;
+}
+.package_units .single_unit{
+    margin:2px;
+    padding: 0px 2px;
+    background-color: rgb(44 44 44 / 38%);
+    border-radius: 3px;
+    width:fit-content; 
+    height: fit-content;
+
+}
+.free_package{ 
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(0 104 0 / 48%);
+    height: fit-content;
+}
+.premium_package{
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color:rgb(237 255 0 / 37%);
+    height: fit-content;
+}
+
+.no_result_found{
+    background-color: rgba(0, 0, 0, 0.351);
+    font-size: 200%;
+    color:white;
+    border-radius: 15px;
+    padding:20px 80px;
+}
+
+ 
+
+#test_package_root .paginate-root{
+    position: absolute;
+    bottom:5px;
+    left:20%;
+    width:60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color:white;
+    font-size: 20px;
+    list-style-type: none;
+    height: fit-content;
+    direction: ltr;
+    user-select: none;
+    
+}
+#test_package_root .paginate-control-button{
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0px 15px;
+    border-radius: 5px;
+    color:white;
+    transition-duration: 200ms;
+}
+
+#test_package_root .single-page-element{
+    color:white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 200ms;
+    height: fit-content;
+}
+li.selected{
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#test_package_root #paginate_root{
+    width: 80%;
+    position: absolute;
+    bottom:5px;
+    left:10%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+    color:white;
+}
+#test_package_root #paginate_root button{
+    font-size: 32px;
+    background-color: transparent ;
+    border: 1px solid rgb(0, 255, 200);
+    color: rgb(0, 255, 200);
+    padding:0px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#test_package_root #paginate_label{
+    padding:2px 20px;
+    color: rgb(0, 255, 200);
+}
+
+#test_package_root #test_packages_process_container{
+    color:white;
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 30px;
+  margin: auto;
+}

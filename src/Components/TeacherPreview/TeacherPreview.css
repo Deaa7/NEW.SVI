@@ -1,0 +1,172 @@
+
+#teacher_preview_root{
+    width: 96%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 10px;
+    background-color:rgb(12, 12, 12);
+    color:white;
+    padding:1%;
+    animation-duration: 500ms;
+    position: relative;
+    /* background-image: url('./s.jpg');
+    background-position: center;
+ background-size: cover; */
+
+}
+@keyframes show_teacher {
+    from{
+    filter: blur(10px);
+ }
+}
+@keyframes hide_teacher {
+    to{
+        opacity: 1;
+    }
+}
+#teacher_preview_filter_root{
+    display: none;
+  animation-duration: 300ms;
+  animation-name: show_up_filter;
+}
+
+@keyframes show_up_filter {
+    from{
+        transform: rotateX(90deg);
+    }
+}
+
+#teacher_preview_root .fa-graduation-cap{
+    position: absolute;
+    top:-38px;
+    left:15px;
+}
+#teacher_preview_root button{
+    border:none;
+    border-radius: 2px;
+    cursor: pointer;
+    color:white;
+
+}
+
+#teacher_preview_show_hide_filter{
+padding: 5px 15px;
+font-size: 18px;
+background-color:rgb(0 153 130)   ;
+margin-bottom: 15px;
+border-radius:7px !important;
+}
+
+#teacher_preview_show_hide_filter:hover{
+    background-color: rgb(0 216 183);  
+}
+
+#teacher_name_class_container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#class_selection_container{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+#class_selection_container span
+{
+    font-size: 20px;
+    padding: 8px;
+}
+
+#class_selection_container button{
+    background-color: rgb(24, 24, 24);
+    font-size: 20px;
+    padding: 8px 25px;
+    border-radius: 10px ;
+    text-shadow: 0px 0px 3px white;
+}
+
+ 
+#teacher_class_12{
+    outline:2px solid rgb(150, 150, 150);
+}
+
+#teacher_name_container{
+    padding:5px;
+}
+#teacher_name_container label{
+    font-size: 20px;
+}
+#teacher_name_field{
+    background-color: rgb(31, 30, 30);
+    border: none;
+    border-radius: 4px;
+    color:white;
+    padding:5px;
+    margin-right:5px;
+}
+#teacher_name_field::placeholder{
+color:rgba(255, 255, 255, 0.71);
+text-align: center;
+}
+#teacher_preview_city_title{
+    font-size: 18px;
+}
+#syrian_cities_select{
+    text-align: center;
+    border: none;
+    background-color: rgb(31, 30, 30);
+    border-radius: 4px;
+    padding:5px 10px;
+    color:white;
+    margin-right: 3px;
+}
+#subject_filter_bar{
+    background-color: rgb(31, 30, 30);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding:5px;
+    border-radius: 3px;
+}
+#subject_filter_bar span{
+    padding:5px;
+    font-size: 18px;
+}
+#subject_filter_bar .filter_subject_name{
+    background-color: rgb(17, 17, 17);
+    cursor: pointer;
+    padding:5px 15px;
+    border-radius: 3px;
+    margin: 2px 5px;
+    font-size: 16px;
+}
+ 
+#teacher_preview_sort_bar{
+    background-color: rgb(31, 30, 30);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding:5px;
+    border-radius: 3px;
+
+}
+.sort_by_title{
+    width: 30%;
+    font-size: 18px;
+}
+#teacher_preview_sort_bar button{
+    background-color: rgb(17, 17, 17);
+    cursor: pointer;
+    padding:5px 15px;
+    border-radius: 3px;
+    margin: 2px 5px;
+    font-size: 16px;
+}
+ 

@@ -1,0 +1,123 @@
+:root {
+    --TextColor: #000;
+    --BorderColor: #000;
+    --TextInInput: #000;
+    --HoverColor: #000;
+    --ButtonColor: #000;
+    --IconColor: #000;
+}
+
+/* الصندوق كامل */
+.Register-page {
+    background: url('1.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+     height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* بس الفورم وكل شي بيحتويه */
+.form-box {
+    position: relative;
+    width: 20%;
+    height: fit-content;
+    border: none;
+    border-radius: 20px;
+    backdrop-filter: blur(30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	padding:2%;
+}
+
+/* كلمة SignUp */
+.form-box h2 {
+    color: var(--TextColor);
+    text-align: center;
+    font-size: 200%;
+}
+
+/* حقول الادخال مع الرموز  */
+.form-box .input-register {
+    position: relative;
+    margin: 8% 0;
+    width: 100%;
+    border-bottom: 2px solid #590893ce;
+}
+
+/* فقط حقول الادخال */
+.form-box .input-register input {
+    width: 100%;
+    height: 2%;
+    background: transparent;
+    border: none;
+    outline: none;
+    
+     
+}
+
+/* النص الافتراضي ضمن الحقول */
+.form-box .input-register input::placeholder {
+    color: var(--TextInInput);
+    font-weight: bold;
+}
+
+/* Register زر  */
+.Buttons .BRegister {
+    color: #FFF;
+    background: var(--ButtonColor);
+    width: 30%;
+    padding:3%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    
+    cursor: pointer;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, .5);
+}
+
+
+/* عند الضغط عالزر */
+.Buttons button :focus {
+    text-decoration: underline;
+    background: blue;
+}
+
+/* الايقونات */
+.input-register i {
+    position: relative;
+    left: 95%;
+    bottom: -20px;
+    
+    color: var(--IconColor);
+}
+
+/* سطر في حال وجود حساب  */
+.Buttons p {
+    
+    padding: 2%;
+    color: var(--TextColor);
+}
+
+/* Login كلمة بالاخير */
+.Buttons p .BLogin {
+	padding: 10%;
+    color: gold;
+}
+.success_box{
+    background-color: rgba(10, 114, 10, 0.604);
+    padding:20px;
+    font-size: 120%;
+    border-radius: 25px;
+    color:white;
+    
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    bottom:60px;
+ 
+}
+ 

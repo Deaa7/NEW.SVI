@@ -1,0 +1,65 @@
+ 
+#header_root{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index:100;
+    background-color: #0e0e0edf;
+    animation-duration: 500ms;
+    direction: rtl ;
+
+}
+#header_root:hover{
+    background-color: rgb(32, 32, 32) ;
+}
+#login_register_container ,
+#home_about_container,
+#username_and_logout_container{
+  display: flex;
+  justify-content: space-between;
+}
+#header_logout,
+#header_username,
+#header_login,
+#header_register,
+#header_about,
+#header_home
+{
+   padding:5px 10px ;
+   margin: 5px 10px;
+   font-size: 18px;
+   color: rgb(0, 255, 191);
+   perspective: 2em;
+   background-color: rgba(128, 128, 128, 0.125);
+   width: fit-content;
+   border-radius: 5px;
+   cursor: pointer;
+   text-decoration: none;
+   border: none;
+   transition: 100ms;
+ 
+}
+ 
+#header_logout:hover,
+#header_username:hover,
+#header_login:hover,
+#header_register:hover,
+#header_about:hover,
+#header_home:hover
+{
+    background-color: rgba(212, 212, 212, 0.53);
+}
+@keyframes hide_header {
+    to{
+        transform: translateY(-100px);
+ 
+    }
+}
+@keyframes show_header {
+    to{
+        transform: translateY( 0px);
+    
+    }
+}
+ 

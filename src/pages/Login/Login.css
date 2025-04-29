@@ -1,0 +1,130 @@
+/*
+wrapper >> الصندوق كامل 
+input >> اي حقل بحط فيه قيمة
+box >> نفسو الفورم يعني الصندوق كامل بلا ويلكم
+*/
+
+:root {
+    --TextColor: #001524;
+    --BorderColor: rgb(10, 105, 105);
+    --TextInInput: #31304D;
+    --HoverColor: rgb(82, 11, 13);
+    --ButtonColor: #001524;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    width: 20%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    padding: 2% 1%;
+}
+
+.wrapper h1 {
+    font-size: 200%;
+    text-align: center;
+    color: var(--TextColor);
+}
+
+.wrapper .box {
+    position: relative;
+    width: 100%;
+    margin: 10% 0;
+}
+
+.box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #590893ce;
+    /* border-radius: 10px; */
+    
+    color: var(--TextInColor);
+    padding: 2%;
+}
+
+.box input::placeholder {
+    color: var(--TextColor);
+    font-weight: bold;
+}
+
+#icon,
+#iconeye {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+     
+    color: var(--TextColor);
+}
+
+ 
+.remember-forget label input {
+    color: var(--TextColor);
+    margin-right: 5px;
+}
+
+.remember-forget .RememberMe {
+    color: var(--TextColor);
+    font-weight: bold;
+}
+
+.Li a {
+    text-decoration: none;
+    color: var(--HoverColor);
+    font-size: 15px;
+}
+
+#button {
+    width: 100%;
+    padding:2%;
+    background: var(--ButtonColor);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+     
+    color: #FFF;
+    font-weight: bold;
+}
+
+
+.Link-to-Register {
+    
+    text-align: center;
+     
+    color: var(--TextColor);
+}
+
+.Link-to-Register p {
+    color: var(--TextColor);
+    text-decoration: none;
+    font-weight: bold;
+   
+}
+
+.links {
+    text-decoration: none;
+    color: rgb(204, 174, 6);
+}
+
+.error {
+    font-size: 90%;
+    color: red;
+}

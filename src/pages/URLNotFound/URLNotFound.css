@@ -1,0 +1,12 @@
+#not_found_container{
+    width: fit-content;
+    height: 500px;
+    margin: auto;
+    color:white;
+    font-size: 300%;
+    text-align: center;
+
+}
+#not_found_to_home_page:hover{
+ color:blue;
+}
