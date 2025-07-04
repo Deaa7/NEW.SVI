@@ -1,123 +1,135 @@
 :root {
     --TextColor: #000;
-    --BorderColor: #000;
-    --TextInInput: #000;
-    --HoverColor: #000;
-    --ButtonColor: #000;
-    --IconColor: #000;
+    --BorderColor: #333;
+    --TextInInput: #222;
+    --HoverColor: #009688;
+    --ButtonColor: #009688;
+    --IconColor: #009688;
+    --ErrorColor: #e53935;
 }
 
-/* الصندوق كامل */
+/* الصندوق كامل مع الخلفية */
 .Register-page {
     background: url('1.jpg') no-repeat;
     background-position: center;
     background-size: cover;
-     height: 100vh;
-    width: 100%;
+    min-height: 100vh;          
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 0px;         
+    padding-bottom: 150px;      
 }
 
-/* بس الفورم وكل شي بيحتويه */
+/* صندوق التسجيل */
 .form-box {
-    position: relative;
-    width: 20%;
-    height: fit-content;
-    border: none;
+    background: rgba(255,255,255,0.18);
     border-radius: 20px;
-    backdrop-filter: blur(30px);
+    backdrop-filter: blur(25px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    padding: 32px 30px 20px 30px;
+    width: 350px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-	padding:2%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
 }
 
-/* كلمة SignUp */
-.form-box h2 {
+/* العنوان */
+.form-title {
     color: var(--TextColor);
     text-align: center;
-    font-size: 200%;
-}
-
-/* حقول الادخال مع الرموز  */
-.form-box .input-register {
-    position: relative;
-    margin: 8% 0;
-    width: 100%;
-    border-bottom: 2px solid #590893ce;
-}
-
-/* فقط حقول الادخال */
-.form-box .input-register input {
-    width: 100%;
-    height: 2%;
-    background: transparent;
-    border: none;
-    outline: none;
-    
-     
-}
-
-/* النص الافتراضي ضمن الحقول */
-.form-box .input-register input::placeholder {
-    color: var(--TextInInput);
+    font-size: 1.8em;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
-/* Register زر  */
-.Buttons .BRegister {
-    color: #FFF;
-    background: var(--ButtonColor);
-    width: 30%;
-    padding:3%;
-    border-radius: 5px;
+/* كل input مع مسافة */
+.input-group {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* كل الحقول */
+.input {
+    width: 100%;
+    border: 1.2px solid var(--BorderColor);
+    border-radius: 9px;
+    padding: 8px 11px;
+    font-size: 1em;
+    color: var(--TextInInput);
+    background: rgba(255,255,255,0.65);
+    transition: border 0.2s;
+    margin-top: 4px;
+}
+
+.input:focus {
+    border: 1.2px solid var(--HoverColor);
     outline: none;
+}
+
+/* زرين طالب/أستاذ */
+.type-selector {
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 30px;
+    margin-bottom: 18px;
+}
+
+/* زر التسجيل */
+.button {
+    background: var(--ButtonColor);
+    color: #fff;
     border: none;
-    
+    border-radius: 9px;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
     cursor: pointer;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, .5);
+    margin-top: 10px;
+    margin-bottom: 7px;
+    transition: background 0.2s;
 }
 
+.button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
 
-/* عند الضغط عالزر */
-.Buttons button :focus {
+.button:hover:not(:disabled) {
+    background: #00796b;
+}
+
+/* الرسائل */
+.error-message {
+    color: var(--ErrorColor);
+    background: rgba(255,0,0,0.09);
+    border-radius: 7px;
+    padding: 5px 9px;
+    font-size: 0.98em;
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+/* لديك حساب */
+.have-account {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+.login-link {
+    color: var(--HoverColor);
     text-decoration: underline;
-    background: blue;
+    margin-right: 6px;
 }
 
-/* الايقونات */
-.input-register i {
-    position: relative;
-    left: 95%;
-    bottom: -20px;
-    
-    color: var(--IconColor);
+@media (max-width: 500px) {
+    .form-box {
+        width: 96vw;
+        padding: 10px 2vw 20px 2vw;
+    }
+    .form-title { font-size: 1.2em;}
 }
-
-/* سطر في حال وجود حساب  */
-.Buttons p {
-    
-    padding: 2%;
-    color: var(--TextColor);
-}
-
-/* Login كلمة بالاخير */
-.Buttons p .BLogin {
-	padding: 10%;
-    color: gold;
-}
-.success_box{
-    background-color: rgba(10, 114, 10, 0.604);
-    padding:20px;
-    font-size: 120%;
-    border-radius: 25px;
-    color:white;
-    
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    bottom:60px;
- 
-}
- 

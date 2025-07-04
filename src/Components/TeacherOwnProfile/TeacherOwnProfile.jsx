@@ -90,12 +90,15 @@ export default function TeacherOwnProfile() {
         <div id="teacher_own_profile_upper_part"></div>
         
         <div id="teacher_own_profile_root">
-        <Link to = {'/AddExam'}  style ={{ color:'white' }}> add exam </Link> <br/>
-          <Link to={'/TextEditor'} style={{ color: 'white' }} > text editor </Link><br/>
-		 
-                <Link to={'/EditingTeacherProfile/'+user.user_id} id="edit_teacher_info_profile"> تعديل بياناتي الشخصية &nbsp;
-                <i className="fa-solid fa-pen-to-square"></i>
+            <div style={{ marginBottom: "24px" }}>
+                <Link to={'/AddExam'} className="profile-btn">إضافة امتحان</Link>
+                <Link to={'/TextEditor'} className="profile-btn">محرر النصوص</Link>
+                <Link to={'/EditingTeacherProfile/' + user.user_id} className="profile-btn" id="edit_teacher_info_profile">
+                    تعديل بياناتي الشخصية &nbsp;
+                    <i className="fa-solid fa-pen-to-square"></i>
                 </Link>
+            </div>
+
             <div id="teacher_own_profile_first_part_img_bio_container">
             <div id="teacher_own_profile_first_part">
                 <div id="teacher_name">{content}</div>

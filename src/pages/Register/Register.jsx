@@ -1,186 +1,232 @@
 import "./Register.css";
-//  import "../../all.min.css";
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { BaseURL } from "../../API/APIs";
-import { Register as RegisterURL } from "../../API/APIs";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Register() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordR, setPasswordR] = useState("");
-  const [accept, setAccept] = useState(false);
-  const [existence, set_existence] = useState([]); // email or(and) name already exist(s)
+  const [isTeacher, setIsTeacher] = useState(false);
+  const [form, setForm] = useState({
+    username: "",
+    password: "",
+    passwordR: "",
+    full_name: "",
+    email: "",
+    gender: "M",
+    Class: "9",
+    city: "",
+    phone_number: "",
+    studying_subjects: "math",
+    school: "", 
+  });
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+  const navigate = useNavigate();
 
-  // localStorage.clear();
+  const cities = [
+    "دمشق", "ريف دمشق", "حمص", "حماة", "حلب", "اللاذقية", "طرطوس", "درعا", "القنيطرة", "السويداء", "دير الزور", "الرقة", "الحسكة", "إدلب"
+  ];
 
-  const pass = document.getElementById("pass");
-  const iconeye = document.getElementById("iconeyeR");
+  const subjects = [
+    "math", "physics", "chemistry", "science", "arabic", "english", "france", "islam", "physics_chemistry", "geography"
+  ];
 
-  function eye() {
-    /* تابع لاظهار واخفاء كلمة السر*/
-    if (password.length > 0 && pass.type === "password") {
-      pass.type = "text";
-      iconeye.className = "fa-solid fa-eye-slash";
-    } else if (password.length > 0 && pass.type === "text") {
-      pass.type = "password";
-      iconeye.className = "fa-solid fa-eye";
-    }
-  }
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-  async function Submit(e) {
-    let flag = true;
+  const handleTypeChange = (val) => {
+    setIsTeacher(val === "teacher");
+    setForm({ ...form, Class: val === "teacher" ? "9_12" : "9" });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setAccept(true);
+    setErrorMsg("");
+    setLoading(true);
 
-    if (name === "" || password.length < 5 || password !== passwordR)
-      flag = false;
-    else flag = true;
+    if (!form.username || !form.password || form.password.length < 5 || form.password !== form.passwordR || !form.full_name) {
+      setErrorMsg("يرجى تعبئة جميع الحقول بشكل صحيح.");
+      setLoading(false);
+      return;
+    }
 
-    if (!flag) return;
-
-    let url = `${BaseURL}${RegisterURL}`;
-
-    let user = {
-      username: name,
-      email: email,
-      password: password,
-      isTeacher: false,
+    let data = {
+      username: form.username,
+      password: form.password,
+      is_teacher: isTeacher,
+      full_name: form.full_name,
+      email: form.email,
+      gender: form.gender,
+      Class: form.Class,
+      city: form.city,
+      phone_number: form.phone_number,
     };
 
-    console.log("the user ", user);
+    if (isTeacher) {
+      data.studying_subjects = form.studying_subjects;
+    }
+    else{
+      data.school = form.school;
+    }
 
-    axios
-      .post(url, user)
-      .then(() => {
-        //  console.log('yes he is added')
-        localStorage.setItem("successful_register", true);
-
-        window.location.reload();
-      })
-      .catch((err) => {
-        console.log("there was an error from register", err);
-
-        if (err.response.data !== null) set_existence(err.response.data);
-      });
-  }
-
-  let show_success_box = false;
-
-  if (localStorage.getItem("successful_register") !== null) {
-    show_success_box = true;
-
-    // console.log('yes');
-    localStorage.clear();
-    setTimeout(hide_success_box, 5000);
-  }
+    try {
+      const res = await axios.post(
+        "https://deaa7work.pythonanywhere.com/users/register/",
+        data,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (res.data) {
+        alert("تم إنشاء الحساب بنجاح! يمكنك تسجيل الدخول الآن.");
+        navigate("/login");
+      } else {
+        console.log(res);
+        setErrorMsg("حدث خطأ أثناء التسجيل، يرجى المحاولة لاحقاً.");
+      }
+    } catch (err) {
+      // إذا هناك حقول فيها أخطاء من API مباشرة
+      const errMsg =
+        err?.response?.data?.detail ||
+        (err?.response?.data && typeof err.response.data === "object"
+          ? Object.values(err.response.data).join("، ")
+          : "فشل التسجيل: اسم المستخدم مستخدم أو البيانات غير صحيحة.");
+      setErrorMsg(errMsg);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <>
-      <div className="Register-page">
-        {show_success_box && (
-          <div className="success_box">
-            {" "}
-            Registration complete successful , log in with your account
+    <div className="Register-page">
+      <form className="form-box" onSubmit={handleSubmit} dir="rtl">
+        <h2 className="form-title">تسجيل حساب جديد</h2>
+        <div className="type-selector input-group">
+          <label>
+            <input type="radio" name="userType" value="student" checked={!isTeacher} onChange={() => handleTypeChange("student")} />
+            طالب
+          </label>
+          <label style={{ marginRight: "1.5em" }}>
+            <input type="radio" name="userType" value="teacher" checked={isTeacher} onChange={() => handleTypeChange("teacher")} />
+            أستاذ
+          </label>
+        </div>
+        <div className="input-group">
+          <input
+            className="input"
+            type="text"
+            name="username"
+            placeholder="اسم المستخدم"
+            value={form.username}
+            onChange={handleChange}
+            autoComplete="off"
+          />
+        </div>
+        <div className="input-group">
+          <input
+            className="input"
+            type="text"
+            name="full_name"
+            placeholder="الاسم الكامل"
+            value={form.full_name}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="input-group">
+          <input
+            className="input"
+            type="text"
+            name="email"
+            placeholder="الايميل"
+            value={form.email}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="input-group">
+          <input
+            className="input"
+            type="password"
+            name="password"
+            placeholder="كلمة المرور"
+            value={form.password}
+            onChange={handleChange}
+            autoComplete="new-password"
+          />
+        </div>
+        <div className="input-group">
+          <input
+            className="input"
+            type="password"
+            name="passwordR"
+            placeholder="تأكيد كلمة المرور"
+            value={form.passwordR}
+            onChange={handleChange}
+            autoComplete="new-password"
+          />
+        </div>
+        {!isTeacher && (<div className="input-group">
+          <input
+            className="input"
+            type="text"
+            name="school"
+            placeholder="اسم المدرسة"
+            value={form.school}
+            onChange={handleChange}
+          />
+        </div>)}
+        <div className="input-group">
+          <select className="input" name="gender" value={form.gender} onChange={handleChange}>
+            <option value="M">ذكر</option>
+            <option value="F">أنثى</option>
+          </select>
+        </div>
+        <div className="input-group">
+          <select className="input" name="Class" value={form.Class} onChange={handleChange}>
+            {!isTeacher && <option value="9">صف تاسع</option>}
+            {!isTeacher && <option value="12">صف ثالث ثانوي</option>}
+            {isTeacher && <option value="9_12">تاسع + بكالوريا</option>}
+          </select>
+        </div>
+        <div className="input-group">
+          <select className="input" name="city" value={form.city} onChange={handleChange}>
+            <option value="">اختر المحافظة</option>
+            {cities.map((city) => (
+              <option key={city} value={city}>{city}</option>
+            ))}
+          </select>
+        </div>
+        <div className="input-group">
+          <input
+            className="input"
+            type="text"
+            name="phone_number"
+            placeholder="رقم الهاتف"
+            value={form.phone_number}
+            onChange={handleChange}
+          />
+        </div>
+        {isTeacher && (
+          <div className="input-group">
+            <select className="input" name="studying_subjects" value={form.studying_subjects} onChange={handleChange}>
+              {subjects.map((sub) => (
+                <option key={sub} value={sub}>{sub}</option>
+              ))}
+            </select>
           </div>
         )}
-
-        <div className="form-box">
-          <form onSubmit={Submit}>
-            <h2>SignUp</h2>
-
-            <div className="input-register">
-              <i className="fa-solid fa-user"></i>
-              <input
-                type="text"
-                placeholder=" UserName"
-                name="username"
-                required
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              {accept && (existence.length > 1 || existence[0] === "name") && (
-                <p className="error" style={{ fontSize: "15px", color: "red" }}>
-                  name is already been taken
-                </p>
-              )}
-            </div>
-
-            <div className="input-register">
-              <i className="fa-solid fa-envelope"></i>
-              <input
-                type="email"
-                placeholder=" Email"
-                name="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              {accept && (existence.length > 1 || existence[0] === "email") && (
-                <p className="error" style={{ fontSize: "14px", color: "red" }}>
-                  Email is already been taken
-                </p>
-              )}
-            </div>
-
-            <div className="input-register">
-              <i
-                className="fa-solid fa-eye"
-                id="iconeyeR"
-                onClick={eye}
-                style={{ cursor: "pointer" }}></i>
-              <input
-                type="password"
-                placeholder=" Password"
-                name="password"
-                required
-                minLength={5}
-                maxLength={20}
-                id="pass"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <div className="input-register">
-              <i className="fa-solid fa-lock"></i>
-              <input
-                type="password"
-                placeholder=" Confirm Password"
-                name="confirm pass"
-                required
-                minLength={5}
-                maxLength={20}
-                value={passwordR}
-                onChange={(e) => setPasswordR(e.target.value)}
-              />
-              {passwordR !== password && accept && (
-                <p style={{ fontSize: "15px", color: "red" }}>
-                  Password does not match
-                </p>
-              )}
-            </div>
-            <div className="Buttons">
-              <button className="BRegister">Register</button>
-              <p>
-                Do you already have an account?
-                <Link className="BLogin" to={"/Login"}>
-                  Login
-                </Link>
-              </p>
-            </div>
-          </form>
-        </div>
-      </div>
-    </>
+        {errorMsg && <div className="error-message">{errorMsg}</div>}
+        <button className="button" type="submit" disabled={loading}>
+          {loading ? "جارٍ التسجيل..." : "تسجيل"}
+        </button>
+        <p className="have-account">
+          لديك حساب بالفعل؟{" "}
+          <Link to="/login" className="login-link">
+            سجّل الدخول
+          </Link>
+        </p>
+      </form>
+    </div>
   );
 }
-
-function hide_success_box() {
-  let ele = document.querySelector(".success_box");
-
-  if (ele !== undefined && ele !== null)
-    document.querySelector(".success_box").style.display = "none";
-}
- 

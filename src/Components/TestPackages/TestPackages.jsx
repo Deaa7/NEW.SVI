@@ -34,10 +34,6 @@ export default function TestPackages({ price, number_of_tests, units, publisher_
     let render = useRef(false);
     let firstRendering = useRef( user.user_id > 0 );
 
-     
-    sessionStorage.clear();
-    localStorage.clear(); 
-
     let url = BaseURL + GetStudentSolvedExams + subject_name + '/';
 
     let user_solved_exams = useQuery({

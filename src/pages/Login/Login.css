@@ -1,130 +1,109 @@
-/*
-wrapper >> الصندوق كامل 
-input >> اي حقل بحط فيه قيمة
-box >> نفسو الفورم يعني الصندوق كامل بلا ويلكم
-*/
-
-:root {
-    --TextColor: #001524;
-    --BorderColor: rgb(10, 105, 105);
-    --TextInInput: #31304D;
-    --HoverColor: rgb(82, 11, 13);
-    --ButtonColor: #001524;
-}
-
-.login {
+.Login-page {
+    background: url('1.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: url('1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
-.wrapper {
-    width: 20%;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    backdrop-filter: blur(30px);
-    border-radius: 10px;
-    padding: 2% 1%;
+.login-form-box {
+    background: rgba(255,255,255,0.16);
+    border-radius: 20px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.18);
+    padding: 32px 30px 18px 30px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
 }
 
-.wrapper h1 {
-    font-size: 200%;
+.login-form-title {
+    color: var(--TextColor, #000);
     text-align: center;
-    color: var(--TextColor);
-}
-
-.wrapper .box {
-    position: relative;
-    width: 100%;
-    margin: 10% 0;
-}
-
-.box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid #590893ce;
-    /* border-radius: 10px; */
-    
-    color: var(--TextInColor);
-    padding: 2%;
-}
-
-.box input::placeholder {
-    color: var(--TextColor);
+    font-size: 1.8em;
+    margin-bottom: 18px;
     font-weight: bold;
 }
 
-#icon,
-#iconeye {
-    position: absolute;
-    right: 2%;
-    top: 50%;
-    transform: translateY(-50%);
-     
-    color: var(--TextColor);
+.input-group {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
 }
 
- 
-.remember-forget label input {
-    color: var(--TextColor);
-    margin-right: 5px;
-}
-
-.remember-forget .RememberMe {
-    color: var(--TextColor);
-    font-weight: bold;
-}
-
-.Li a {
-    text-decoration: none;
-    color: var(--HoverColor);
-    font-size: 15px;
-}
-
-#button {
+.input {
     width: 100%;
-    padding:2%;
-    background: var(--ButtonColor);
+    border: 1.2px solid var(--BorderColor, #333);
+    border-radius: 9px;
+    padding: 8px 11px;
+    font-size: 1em;
+    color: var(--TextInInput, #222);
+    background: rgba(255,255,255,0.62);
+    transition: border 0.2s;
+    margin-top: 4px;
+}
+
+.input:focus {
+    border: 1.2px solid var(--HoverColor, #009688);
     outline: none;
+}
+
+.button {
+    background: var(--ButtonColor, #009688);
+    color: #fff;
     border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border-radius: 9px;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
     cursor: pointer;
-     
-    color: #FFF;
-    font-weight: bold;
+    margin-top: 7px;
+    margin-bottom: 6px;
+    transition: background 0.2s;
 }
 
+.button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
 
-.Link-to-Register {
-    
+.button:hover:not(:disabled) {
+    background: #00796b;
+}
+
+.error-message {
+    color: var(--ErrorColor, #e53935);
+    background: rgba(255,0,0,0.08);
+    border-radius: 7px;
+    padding: 5px 9px;
+    font-size: 0.98em;
+    margin-bottom: 7px;
     text-align: center;
-     
-    color: var(--TextColor);
 }
 
-.Link-to-Register p {
-    color: var(--TextColor);
-    text-decoration: none;
-    font-weight: bold;
-   
+.no-account {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 1em;
 }
 
-.links {
-    text-decoration: none;
-    color: rgb(204, 174, 6);
+.register-link {
+    color: var(--HoverColor, #009688);
+    text-decoration: underline;
+    margin-right: 4px;
 }
 
-.error {
-    font-size: 90%;
-    color: red;
+@media (max-width: 500px) {
+    .login-form-box {
+        width: 96vw;
+        padding: 10px 2vw 15px 2vw;
+    }
+    .login-form-title { font-size: 1.2em;}
 }

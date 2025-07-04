@@ -16,9 +16,6 @@ export default function Home() {
   
   let last_scroll = 0;
   
-  sessionStorage.clear();  
-  localStorage.clear();
-  
   // handling head appearing and disappearing when scrolling
   window.addEventListener('scroll', (e) => {
  

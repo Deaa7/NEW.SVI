@@ -5,6 +5,7 @@ import { BaseURL, RefreshUserData } from "../API/APIs";
 import Cookie from 'cookie-universal';
 import LoadingPage from "../pages/LoadingPage";
 import katex from 'katex';
+import api from "../API/APIs.js";
 // import WirisPlugin from '@wiris/mathtype-generic/wirisplugin-generic.js';
 
 export const User = createContext( );
@@ -44,7 +45,7 @@ export  function GeneralInfoProvider({ children })
             refresh:  readCookieValue('refresh_token'),
         }
 
-        axios.post(url, obj).then(res => {
+        api.post(url, obj).then(res => {
             let dd = {
                 username: res.data.user.username,
                 access_token: res.data.access,

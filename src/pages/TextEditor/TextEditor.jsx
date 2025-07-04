@@ -1,7 +1,7 @@
 import "./TextEditor.css";
 import katex from "katex";
 import { useEffect, useState, useRef, useContext } from "react";
-import axios from "axios";
+import api from "../../API/APIs.js";
 import ReactQuill  from "react-quill";
 // import 'quill/dist/quill.snow.css';
 // import 'react-quill/dist/quill.snow.css';
@@ -187,11 +187,7 @@ window.mathVirtualKeyboard.layouts = [{
 export default function TextEditor() {
   
   window.katex = katex;
-  
-  window.addEventListener('popstate' ,()=> {
-    localStorage.clear();
-    sessionStorage.clear();
-  })
+
 
   modules.toolbar.handlers = {
     image: imageHandler,
@@ -699,7 +695,7 @@ export default function TextEditor() {
     
     if (ele)
     {
-      if (localStorage.getItem('selected_equation') == selector) 
+      if (localStorage.getItem('selected_equation') === selector) 
       {
         ele.style.border = 'none';
         localStorage.removeItem('selected_equation');
@@ -896,7 +892,7 @@ export default function TextEditor() {
 
     let url = BaseURL + UploadTempImage;
 
-    axios.post(url, data)
+    api.post(url, data)
       .then(res => {
         console.log('here is image uploaded', res);
     
@@ -952,7 +948,7 @@ export default function TextEditor() {
  
    ele = document.getElementById("text_editor_notifications");
    if (!ele) return;
-   if (ele.style.display == 'block')
+   if (ele.style.display === 'block')
    {
       setTimeout(() => {
        ele.style.display = "none";
@@ -1066,7 +1062,7 @@ export default function TextEditor() {
 
     let url = BaseURL + AddNote;
 
-    axios.post(url, obj)
+    api.post(url, obj)
       .then(res => {
         fixing_images_function(res.data.id);
       })
@@ -1101,7 +1097,7 @@ export default function TextEditor() {
           if (ele?.childElementCount > 0 )
            await bt(ele.childNodes)
     
-          if (ele?.tagName == 'IMG')
+          if (ele?.tagName === 'IMG')
           {
             // let tem = await fetch(ele.src);
             // tem = await tem.blob();
@@ -1131,14 +1127,14 @@ export default function TextEditor() {
 
     let url = BaseURL + EditNoteById + id + '/';
 
-    axios.post(url, obj)
+    api.post(url, obj)
       .then(res => {
         console.log('note is edited successfully', res.data);
 
         url = BaseURL + DeleteTempImages + user.user_id + '/';
 
         // delete temp images and increase number of teacher exams
-        axios.post(url)
+        api.post(url)
           .then( success_and_reload )
           .catch(err => {
             console.log('error in deleting temp images', err);
@@ -1148,7 +1144,7 @@ export default function TextEditor() {
 
         console.log('here is increase , ', user, user.user_id);
         
-        axios.post(url)
+        api.post(url)
         .catch(err => {
           console.log('error increase number of teacher notes ', err);
         });
@@ -1175,7 +1171,7 @@ export default function TextEditor() {
 
   async function part2( url , send_data)
   {
-    let d = await axios.post(url, send_data).catch(err => {
+    let d = await api.post(url, send_data).catch(err => {
       console.log('error in function part2 ', err);
     } );
     // ele.src = d.data.images;
@@ -1200,8 +1196,6 @@ export default function TextEditor() {
   }
 
   function allDone() {
- 
-    localStorage.clear();
     window.location.reload();
   }
  
@@ -1248,7 +1242,7 @@ export default function TextEditor() {
     formData.append('note_id', id);
     let url = `${BaseURL}${AddNoteImage}`;
 
-    let d = await axios.post(url, formData)
+    let d = await api.post(url, formData)
       .catch(err => {
         console.log('error in photos', err);
         text_editor_close_check_box();
@@ -1257,7 +1251,7 @@ export default function TextEditor() {
         // show_notification('حدث خطأ أثناء إرسال الصور  ', 'red');
       });
     
-    if (index == last)
+    if (index === last)
     {
       let d = document.getElementById('text_editor_spinner_loading_container');
       if (d) d.style.display = 'none';

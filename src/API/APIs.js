@@ -8,7 +8,22 @@ export const BaseURL = `https://deaa7work.pythonanywhere.com/`;
 export const BaseURLImages = `http://127.0.0.1:8000`;
 // export const BaseURLImages = `https://deaa7work.pythonanywhere.com`;
 
+const api = axios.create({
+  baseURL: "https://deaa7work.pythonanywhere.com/",
+});
 
+api.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+export default api;
 ///////////////////////////////// test packages  urls :  
 
 export const CreateExam = `test_packages/create_test_packages/`;

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import axios from "axios";
 
+import api from "../../API/APIs.js";
 import { User } from "../../Context/Context";
 
 import { useContext } from "react";
@@ -73,7 +74,7 @@ export default function Header() {
         let obj = {
             refresh:  readCookieValue('refresh_token'),
         }
-        axios.post(url, obj).then(res => {
+        api.post(url, obj).then(res => {
           logout(res.data.access);
         })
         .catch(err => {
@@ -87,7 +88,7 @@ export default function Header() {
   {
     let url = BaseURL + Logout ;
     
-    axios.post(url , {
+    api.post(url , {
       username:username,
       refresh_token: refresh_token,
     },

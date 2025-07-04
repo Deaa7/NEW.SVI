@@ -1,5 +1,92 @@
-form{
-   height:500px;
- padding-top:150px;
- color:white;
+.about-page {
+    background: url('../../assets/1.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0;
+}
+.about-card {
+    background: rgba(255,255,255,0.19);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.16);
+    padding: 32px 30px;
+    max-width: 420px;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-img {
+    width: 95px;
+    height: 95px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px #0002;
+    margin-bottom: 16px;
+    background: #fff;
+}
+.about-title {
+    font-size: 1.6em;
+    color: #00897b;
+    margin-bottom: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.about-text {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.7;
+}
+.about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.07em;
+    background: rgba(240,255,255,0.16);
+    padding: 6px 9px;
+    border-radius: 8px;
+}
+.icon {
+    font-size: 1.45em;
+}
+.about-btn {
+    margin-top: 8px;
+    background: #009688;
+    color: #fff;
+    padding: 9px 26px;
+    border-radius: 9px;
+    font-size: 1.04em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.19s;
+    box-shadow: 0 2px 6px #0001;
+}
+.about-btn:hover {
+    background: #00796b;
+}
+@media (max-width: 600px) {
+    .about-card {
+        padding: 13px 4vw;
+    }
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+    .about-img {
+        width: 70px;
+        height: 70px;
+    }
 }

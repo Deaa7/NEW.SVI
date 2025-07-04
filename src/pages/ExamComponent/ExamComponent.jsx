@@ -35,8 +35,6 @@ export default function ExamComponent() {
           while (up--) {
               clearInterval(up);
           }
-          sessionStorage.clear();
-          localStorage.clear();
             // }
         // window.confirm();
 

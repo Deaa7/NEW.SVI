@@ -11,6 +11,7 @@ import {
 
 } from "../../data/SubjectUnitsArrays.js";
 import axios from "axios";
+import api from "../../API/APIs.js";
 import Swal from "sweetalert2";
 // import mathml2latex from 'mathml2latex';
 import katex from "katex"
@@ -193,10 +194,6 @@ export default function AddExam() {
   const [user, _] = useContext(User);
   sessionStorage.setItem("user", user.user_id);
   let math_equation = useRef();
-  window.addEventListener('popstate', (ev) => {
-    localStorage.clear();
-    sessionStorage.clear();
-  });
 
   window.katex = katex;
 
@@ -2073,7 +2070,7 @@ export default function AddExam() {
       number_of_questions: questions.length,
     };
     
-    axios
+    api
       .post(url, obj)
       .then((res) => new_send_qeustions(res.data.id))
       .catch((err) => console.log(err));
@@ -2125,7 +2122,7 @@ export default function AddExam() {
       ele.innerHTML = now.test_content;
       ele = ele.children;
    
-      axios.post(url, questionObj)
+      api.post(url, questionObj)
       .then((res) => {
 
         send_images_now(res.data.id,i);
@@ -2205,7 +2202,7 @@ export default function AddExam() {
 
     let url = BaseURL + EditQuestionById + question_id + '/';
 
-    axios.post(url, current_question)
+    api.post(url, current_question)
       .then(res => {
         console.log('question is edited successfully', res.data);
 
@@ -2213,7 +2210,7 @@ export default function AddExam() {
         
 
         // delete temp images and increase number of teacher exams
-        axios.post(url)
+        api.post(url)
           .then(() => {
             if (i == questions.length - 1)
               success_and_reload();
@@ -2225,7 +2222,7 @@ export default function AddExam() {
         url = BaseURL + IncreaseNumberOfTeacherExams + user.user_id + '/';
       
       if (i == questions.length - 1)
-        axios.post(url)
+        api.post(url)
         .catch(err => {
           console.log('error increase number of teacher exams ', err);
         });
@@ -2254,7 +2251,7 @@ async function part1(src)
 
   async function part2( url , send_data)
   {
-    let d = await axios.post(url, send_data).catch(err => {
+    let d = await api.post(url, send_data).catch(err => {
       console.log('error in function part2 ', err);
     } );
     // ele.src = d.data.images;
@@ -2292,7 +2289,7 @@ async function part1(src)
   //       package: id,
   //     };
   //     sessionStorage.setItem('package_id', id);
-  //     axios
+  //     api
   //     .post(url, questionObj)
   //     .then((res) => {
         
@@ -2383,7 +2380,7 @@ async function part1(src)
   //   formData.append('package', sessionStorage.getItem('package_id'));
   //   let url = `${BaseURL}${AddQuestionImage}`;
 
-  //      await axios.post(url, formData)
+  //      await api.post(url, formData)
   //     .catch(err => {
   //       console.log('error in photos tests', err);
   //       notification('حدث خطأ أثناء إرسال صور الأسئلة', 'toast_error');
@@ -2409,8 +2406,7 @@ async function part1(src)
   }
 
   function allDone() {
- 
-    localStorage.clear();
+
     window.location.reload();
   }
  
@@ -2464,7 +2460,7 @@ async function part1(src)
 
     let url = BaseURL + UploadTempImage;
 
-    axios.post(url, data)
+    api.post(url, data)
       .then(res => {
         console.log('here is image uploaded', res);
     

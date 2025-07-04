@@ -26,8 +26,6 @@ export default function SingleTestPackageView()
   
   useEffect(() => {
 
-    sessionStorage.clear();  
-    localStorage.clear();
     initializePageView();
 
     let url = BaseURL+GetSinglePackageView+id+`/`;
